@@ -54,6 +54,10 @@ if __name__ == '__main__':
 #     fig = plt.figure()
     for i, image_file in enumerate(image_files):
         print(image_file)
+        outname = image_file.replace(args.data_folder, output_folder)
+        
+        if(os.path.isfile(fname)):
+        	print("mask exists, skipping")
 
         image = cv2.imread(image_file)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -75,7 +79,7 @@ if __name__ == '__main__':
         mask_1024 = cv2.resize(mask_224, (1024, 1024))
         kernel = np.ones((3,3), np.uint8) 
         
-        outname = image_file.replace(args.data_folder, output_folder)
+       
         
         cv2.imwrite(outname, mask_1024)
         
