@@ -25,7 +25,7 @@ if __name__ == '__main__':
     starting_num = 16;
 
     # Arguments
-    parser.add_argument('--data-folder', type=str, default='./data/data_crop_1024_jpg_la60_68pt_sf25_ed40_mode_constant128',
+    parser.add_argument('--data-folder', type=str, default='../crop-faces-from-dataset/data_crop_1024_jpg_la60_68pt_sf40_ed40_mode_constant128',
                         help='name of the data folder (default: ./data)')
     parser.add_argument('--batch-size', type=int, default=4,
                         help='batch size (default: 8)')
